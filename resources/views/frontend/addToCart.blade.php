@@ -1,79 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ asset('frontend_assets/css/style.css') }}">
-    <style>
-        /* Add your custom CSS here */
-        .breadcrumb-item+.breadcrumb-item::before {
-            content: '>';
-        }
+@extends('frontend.layouts.app')
 
-        .product-images img {
-            max-width: 100%;
-            border: 1px solid #ddd;
-            padding: 5px;
-        }
+@section('content')
 
-        .product-images .thumbnail {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 10px;
-        }
 
-        .product-details {
-            padding-left: 30px;
-        }
-
-        .price {
-            font-size: 1.5rem;
-            color: #333;
-        }
-
-        .old-price {
-            text-decoration: line-through;
-            color: #999;
-            margin-left: 10px;
-        }
-
-        .discount {
-            color: #d9534f;
-            font-weight: bold;
-        }
-
-        .size-options label {
-            margin-right: 10px;
-        }
-
-        .quantity input {
-            width: 50px;
-            text-align: center;
-        }
-
-        .action-buttons button {
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        .additional-actions {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .additional-actions a {
-            color: #007bff;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container mt-5">
+    <section class="mt-5">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -153,27 +84,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script>
-        // JavaScript to handle quantity increment and decrement
-        document.getElementById('increment-btn').addEventListener('click', function() {
-            let quantityInput = document.getElementById('quantity-input');
-            let currentValue = parseInt(quantityInput.value);
-            quantityInput.value = currentValue + 1;
-        });
-
-        document.getElementById('decrement-btn').addEventListener('click', function() {
-            let quantityInput = document.getElementById('quantity-input');
-            let currentValue = parseInt(quantityInput.value);
-            if (currentValue > 1) {
-                quantityInput.value = currentValue - 1;
-            }
-        });
-    </script>
-</body>
-
-</html>
+    @endsection

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('frontend_assets/css/style.css') }}">
@@ -13,7 +13,7 @@
 </head>
 <body>
 <section class="section1">
-    <div class="container">
+    <div class="containers">
         <div class="row header">
             <div class="col-md-3">
                 <i class="fas fa-search fa-lg"></i>
@@ -23,7 +23,7 @@
                     <li class="list-inline-item"><a href="#" class="text-dark text-decoration-none navbarName">Home</a></li>
                     <li class="list-inline-item dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle text-dark text-decoration-none navbarName" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Mens <i class="fas fa-chevron-down"></i>
+                            Mens <i class="fas fa-chevron-down fa-md "></i>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#">Mens T-Shirt Bundles</a>
@@ -49,8 +49,3 @@
     </div>
 </section>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
-</html>
