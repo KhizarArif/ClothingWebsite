@@ -1,0 +1,263 @@
+/* Custom CSS to style the navbar */
+.section1{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(233, 230, 230);
+    border-bottom: 1px solid #e2d5d5;
+}
+
+
+
+.header {
+    
+   display: flex;
+    justify-content: space-between;
+    align-items: center;     
+}
+
+.header .col-md-3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.header .dropdown-menu {
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.navbarName{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+
+
+.header .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.header .list-inline-item a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.header .list-inline-item a:hover, .header .list-inline-item .dropdown-toggle:hover {
+    /* color: #8893a8; */
+    background-color: cadetblue;
+}
+
+.header .dropdown-toggle::after {
+    display: none;
+}
+
+.header .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+
+/* Product Detail Model */
+
+/* Custom CSS for the product page */
+.breadcrumb-item+.breadcrumb-item::before {
+    content: '>';
+}
+.product-images img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+.product-images .thumbnail {
+    width: 60px;
+    height: 60px;
+    /* margin-bottom: 10px; */
+}
+.product-details {
+    padding-left: 30px;
+    /* display: inline-flexbox; */
+}
+.price {
+    font-size: 1.5rem;
+    color: #333;
+}
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+}
+.discount {
+    color: #d9534f;
+    font-weight: bold;
+}
+.size-options label {
+    margin-right: 10px;
+}
+.quantity input {
+    width: 50px;
+    text-align: center;
+}
+.action-buttons button {
+    width: 100%;
+    margin-top: 10px;
+}
+.additional-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.additional-actions a {
+    color: #007bff;
+}
+
+
+/* Shopping Cart */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+     /* border-collapse: collapse; */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 5px;
+}
+
+
+.container th {
+    border-bottom: 1px solid #ddd;
+    padding: 10px; 
+    text-align: start;
+}
+
+.product_body{
+    border-bottom: 1px solid #ddd;
+    padding: 10px; 
+    text-align: start;
+    height: 80px;
+}
+
+.quantity_body{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.quantity_input{
+    width: 30%;
+    text-align: center;
+    border: none;
+}
+
+.cart img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.product-info {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.product-info p {
+    margin: 5px 0;
+}
+
+.product-info .remove {
+    color: #f00;
+    text-decoration: none;
+}
+
+.quantity-btn {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.quantity-btn:hover {
+    background-color: #ccc;
+}
+
+input[type="number"] {
+    width: 50px;
+    text-align: center;
+}
+
+.cart-summary {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.cart-summary .note-shipping {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.cart-summary .note-shipping a {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #333;
+}
+
+.cart-summary .subtotal {
+    display: inline-block;
+}
+
+.cart-summary .subtotal p {
+    margin: 5px 0;
+}
+
+.cart-summary .tax-shipping {
+    font-size: 12px;
+    color: #777;
+}
+
+.checkout-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.checkout-btn:hover {
+    background-color: #555;
+}
