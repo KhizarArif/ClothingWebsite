@@ -16,4 +16,12 @@ class FrontController extends Controller
     public function index(){
         return $this->frontendServices->index();
     }
+
+    public function productDetails(Request $request, $subcategorySlug = null, $productSlug = null){
+        return $this->frontendServices->productDetails($request, $subcategorySlug, $productSlug);
+    }
+
+    public function addToCart(Request $request){
+        return $this->frontendServices->addToCart($request);
+    }
 }
