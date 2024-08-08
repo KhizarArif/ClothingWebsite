@@ -31,14 +31,16 @@ Route::get('/checkouts', function () {
     return view('frontend.checkout');
 });
 
-Route::controller(FrontController::class)->group(function(){
-    Route::get('/', 'index')->name('home');
-    Route::get('{subcategorySlug?}/{productSlug?}', 'productDetails')->name('frontend.productDetails');
-    Route::get('/add_to_cart', 'addToCart')->name('frontend.addToCart');
-});  
-
-
-
 Route::get('/shopping_cart', function () {
     return view('frontend.shoppingCart');
 });
+
+
+
+Route::controller(FrontController::class)->group(function(){
+    Route::get('/', 'index')->name('home');
+    Route::get('{subcategorySlug?}/{productSlug?}', 'productDetails')->name('frontend.productDetails');
+    Route::post('/add_to_cart', 'addToCart')->name('frontend.addToCart');
+});  
+
+

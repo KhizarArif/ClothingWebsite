@@ -14,6 +14,7 @@
     @if ($products != null)
     @foreach ($products as $product)
     <form class="row" id="addToCartForm">
+        @csrf
             <!-- Product Image Section -->
             @if ($product->productImages->count() > 0)
             <div class="col-md-6 ">
@@ -23,7 +24,7 @@
                         <img src="{{ asset('frontend_assets/image/products/'.$productImage->image) }}" alt="Thumbnail " title="{{$productImage->image}}" class="thumbnail_image" onclick="swapImage('{{ asset('frontend_assets/image/products/'.$productImage->image) }}')">
                         @endforeach
                     </div>
-                    <img src="{{ asset('frontend_assets/image/products/'.$productImage->image) }}" id="mainImage" alt="Main Product Image" class="img-fluid mb-4" title="{{$productImage->image}}">
+                    <img src="{{ asset('frontend_assets/image/products/'.$productImage->image) }}" id="mainImage" alt="Main Product Image" name="product_image" class="img-fluid mb-4" title="{{$productImage->image}}">
                 </div>
             </div>
             @endif
@@ -31,26 +32,28 @@
             <!-- Product Details Section -->
             <div class="col-md-6">
                 <div class="product-details">
-                    <h3>Mens Printed APL Hoodie GRMPR28 - White</h3>
+                    <h3 name="title" value="{{ $product->title}}"> {{ $product->title}} </h3>
+                    <input type="hidden" name="$product->title" value="{{ $product->title}}" >
+                    <input type="hidden" name="product_id" value="{{ $product->id }}">
                     <div class="d-flex">
-                        <h5 class="price"> Rs. 1,799.00 </h5>
-                        <h6 class="original_price">Rs. 2,699.00</h6>
+                        <h5 class="price" name="price"> Rs. {{ $product->price}} </h5>
+                        <h6 class="original_price" name="original_price">Rs. {{ $product->original_price}} </h6>
                     </div>
 
                     <div class="mt-4">
                         <p>Size:</p>
                         <div class="btn-group btn-group-toggle size-options" data-toggle="buttons">
                             <label class="btn btn-outline-dark active">
-                                <input type="radio" name="size" autocomplete="off" checked> Small
+                                <input type="radio" name="size" value="small" autocomplete="off" checked> Small
                             </label>
                             <label class="btn btn-outline-dark">
-                                <input type="radio" name="size" autocomplete="off"> Medium
+                                <input type="radio" name="size" value="medium" autocomplete="off"> Medium
                             </label>
                             <label class="btn btn-outline-dark">
-                                <input type="radio" name="size" autocomplete="off"> Large
+                                <input type="radio" name="size" value="large" autocomplete="off"> Large
                             </label>
                             <label class="btn btn-outline-dark">
-                                <input type="radio" name="size" autocomplete="off"> X-Large
+                                <input type="radio" name="size" value="x-large" autocomplete="off"> X-Large
                             </label>
                         </div>
                     </div>
@@ -62,7 +65,7 @@
 
                                 <button class="btn btn-outline-dark border border-none  btn-bold" type="button" id="decrement-btn">-</button>
 
-                                <input type="text" class="form-control" id="quantity-input" value="1">
+                                <input type="text" class="form-control" id="quantity-input" name="quantity" value="1">
 
                                 <button class="btn btn-outline-dark border border-none  btn-bold " type="button" id="increment-btn">+</button>
 

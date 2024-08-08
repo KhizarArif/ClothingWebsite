@@ -51,8 +51,10 @@ class FrontendServices
     }
 
     public function addToCart($request){
+        dd($request->all());
+        $product = Product::find($request->product_id);
+        dd($product);
 
-        dd($request);
     }
 
 }
